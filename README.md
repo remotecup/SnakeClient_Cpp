@@ -13,10 +13,10 @@ Remote Cup Snake Client C++
 > make
 
 ## Usage
-> change TeamName, Server Ip/Port in build/config
+> change TeamName, Server Ip/Port in build/start.sh
 
 > cd build
 
-> ./snake_client
+> ./start.sh
 
 
