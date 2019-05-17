@@ -13,18 +13,17 @@
 
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
     //read config
-    ifstream config;
-    config.open("config");
-    string line;
-    getline(config, line);getline(config, line);
-    string ip = line;
-    getline(config, line);getline(config, line);
-    string port = line;
-    getline(config, line);getline(config, line);
-    string team_name = line;
-
+    string ip = "127.0.0.1";
+    string port = "20002";
+    string team_name = "base";
+    if ( argc > 1)
+    {
+        ip = argv[1];
+        port = argv[2];
+        team_name = argv[3];
+    }
     int thisSocket;
     struct sockaddr_in destination;
     destination.sin_family = AF_INET;
